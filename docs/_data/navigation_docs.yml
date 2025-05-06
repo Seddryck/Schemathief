@@ -1,10 +1,10 @@
 - title: Getting Started
   docs:
-  - why-$TemplateNameCamelCase$
+  - why-schemathief
   
 - title: Installation
   docs:
-  - installation-$TemplateNameCamelCase$
+  - installation-schemathief
   - installation-net-global-tool
   - installation-net-local-tool
   - deployment-docker

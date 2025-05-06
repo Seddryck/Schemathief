@@ -9,7 +9,7 @@ tags: [cli-usage]
 - `-r, --parser`: Defines the parser to use when the source data is provided through the console. Accepted values are `yaml`, `json`, `xml`, `url`, `FrontMatter` or `FrontMatterMarkdown`. This option is required only when the `--source` argument is omitted or if the extension of the source file is not recognized to determine the parser. For [multiple sources](../multiple-sources), this option applies to all files, regardless of their extensions or any pre-assigned engine associations.
 
 ```bash
-$TemplateNameCamelCase$ -t template.hbs -s data.txt -r json -o output.txt
+schemathief -t template.hbs -s data.txt -r json -o output.txt
 ```
 
 In this example:
@@ -24,7 +24,7 @@ In this example:
 - `-X, --parser-extension`: Defines the association of a file's extension with a parser. More than one association can be specified.
 
 ```bash
-$TemplateNameCamelCase$ -t template.txt -s data.json -X dat:Json;fm:FrontMatter -o output.txt
+schemathief -t template.txt -s data.json -X dat:Json;fm:FrontMatter -o output.txt
 ```
 
 In this example:
@@ -49,7 +49,7 @@ By default following file's extension association are registered:
 - `-e, --engine`: Defines the template engine to use independantly of the template file extension. Accepted values are `scriban`, `dotliquid`, `fluid`, `handlebars`, `stringtemplate`, `smartformat`.
 
 ```powershell
-$TemplateNameCamelCase$ -t template.txt -s data.json -e handlebars -o output.txt
+schemathief -t template.txt -s data.json -e handlebars -o output.txt
 ```
 
 In this example:
@@ -64,7 +64,7 @@ In this example:
 - `-x, --engine-extension`: Defines the association of a file's extension with a template engine. More than one can be specified.
 
 ```powershell
-$TemplateNameCamelCase$ -t template.txt -s data.json -x txt:handlebars;liquid:fluid -o output.txt
+schemathief -t template.txt -s data.json -x txt:handlebars;liquid:fluid -o output.txt
 ```
 
 In this example:

@@ -1,0 +1,11 @@
+{
+    "profiles": {
+        "Schemathief-cli": {
+            "commandName": "Project",
+            //"commandLineArgs": "delta -a ../../../../../../Packata/src/Packata.Core/bin/debug/net8.0/Packata.Core.dll -c Packata.Core.DataPackage   -b https://datapackage.org/profiles/2.0/datapackage.json    -x profile",
+            //"commandLineArgs": "delta -a ../../../../../../Packata/src/Packata.Core/bin/debug/net8.0/Packata.Core.dll -c Packata.Core.Resource      -b https://datapackage.org/profiles/2.0/dataresource.json   -x profile|paths"
+            //"commandLineArgs": "delta -a ../../../../../../Packata/src/Packata.Core/bin/debug/net8.0/Packata.Core.dll -c Packata.Core.Schema        -b https://datapackage.org/profiles/2.0/tableschema.json    -x profile"
+            "commandLineArgs": "delta -a ../../../../../../Packata/src/Packata.Core/bin/debug/net8.0/Packata.Core.dll -c Packata.Core.TableDialect  -b https://datapackage.org/profiles/2.0/tabledialect.json   -x profile"
+        }
+    }
+}

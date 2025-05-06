@@ -1,14 +1,14 @@
 # Boxes include navigation
 
-- title: Why $TemplateNamePascalCase$
-  desc: $TemplateNamePascalCase$ - Transform your data into seamless, dynamic outputs, effortlessly.
+- title: Why Schemathief
+  desc: Schemathief - Transform your data into seamless, dynamic outputs, effortlessly.
   icon: check
-  doc: why-$TemplateNameCamelCase$
+  doc: why-schemathief
 
 - title: Installation
   desc: Get started fast with installation and basic usages
   icon: cog
-  doc: installation-$TemplateNameCamelCase$
+  doc: installation-schemathief
 
 - title: Usage
   desc: Learn about how to configure inputs and outputs

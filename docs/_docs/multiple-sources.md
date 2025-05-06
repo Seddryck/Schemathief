@@ -1,8 +1,8 @@
 ---
-title: Using Multiple Sources in $TemplateNamePascalCase$
+title: Using Multiple Sources in Schemathief
 tags: [cli-usage]
 ---
-$TemplateNamePascalCase$ supports multiple data sources directly from the console, allowing you to build complex models by defining each source as a distinct part. Each source is specified using a key:value format, where each key becomes a unique child within the model structure, allowing you to reference data in a hierarchical way (e.g., model.key).
+Schemathief supports multiple data sources directly from the console, allowing you to build complex models by defining each source as a distinct part. Each source is specified using a key:value format, where each key becomes a unique child within the model structure, allowing you to reference data in a hierarchical way (e.g., model.key).
 
 ## Syntax
 
@@ -22,7 +22,7 @@ Suppose you have two data files that represent different parts of a model:
 ### Command Example
 
 ```powershell
-$TemplateNameCamelCase$ -t template.html -s user:user.yaml;settings:config.json -o output.html
+schemathief -t template.html -s user:user.yaml;settings:config.json -o output.html
 ```
 
 In this case:
@@ -68,4 +68,4 @@ The following template is written with **handlebars** template language:
 - **Format**: Use key:path for each source and separate multiple sources with semicolons.
 - **Hierarchy**: Each key becomes a child of model, allowing hierarchical access to each data part in your templates.
 - **Flexible**: Data Integration: Combine multiple data sources seamlessly, enabling more complex and modular template generation.
-With this approach, $TemplateNamePascalCase$ provides flexibility in managing multi-source data, making it easy to build robust, organized models for dynamic template generation.
+With this approach, Schemathief provides flexibility in managing multi-source data, making it easy to build robust, organized models for dynamic template generation.
