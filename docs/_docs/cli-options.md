@@ -47,7 +47,7 @@ For key-value pairs, the key is followed by a colon (:), and then the value. Mul
 - `--parser-extension=txt:handlebars liquid:fluid`
 - `--parser-extension=txt:handlebars --parser-extension=liquid:fluid`
 
-## $TemplateNamePascalCase$ Options Explained
+## Schemathief Options Explained
 
 ### Template option
 
@@ -63,7 +63,7 @@ Example: `-t path/to/template` or `--template=path/to/template`
 - Shortcut: `-e`
 - Long: `--engine`
 - Description: Specifies the template engine to use (scriban, fluid, dotliquid, handlebars, smartformat, stringtemplate).
-- Accept: single value. When omitted $TemplateNamePascalCase$ will select the engine based on the extension of the template file.
+- Accept: single value. When omitted Schemathief will select the engine based on the extension of the template file.
 - Example: `-e fluid` or `--engine=fluid`
 
 ### Engine files' extension association option
@@ -92,7 +92,7 @@ Example: `-t path/to/template` or `--template=path/to/template`
 - Long: `--parser`
 - Description: Specifies the parser to use (YAML, JSON, XML).
 - Accept: single value.
-- Mandatory: no expect if `--stdin` is specified. When omitted $TemplateNamePascalCase$ will select the parser based on the extension of the source file
+- Mandatory: no expect if `--stdin` is specified. When omitted Schemathief will select the parser based on the extension of the source file
 - Example: `-r YAML` or `--parser=YAML`
 
 ### Parser files' extension association option

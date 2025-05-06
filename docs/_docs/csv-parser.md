@@ -2,7 +2,7 @@
 title: CSV parser
 tags: [parsers]
 ---
-$TemplateNamePascalCase$ leverages the [PocketCsvReader](http://github.com/Seddryck/PocketCsvReader) parser and interprets CSV headers containing `.` and `[]`, dynamically transforming them into structured nested dictionaries or lists, enabling seamless representation of hierarchical data.
+Schemathief leverages the [PocketCsvReader](http://github.com/Seddryck/PocketCsvReader) parser and interprets CSV headers containing `.` and `[]`, dynamically transforming them into structured nested dictionaries or lists, enabling seamless representation of hierarchical data.
 
 ## Default CSV Dialect
 
@@ -20,7 +20,7 @@ Name.Fullname,Name.Acronym,Founded
 NASA,National Aeronautics and Space Administration,1958-07-29
 ```
 
-## Special Header Syntax in $TemplateNamePascalCase$
+## Special Header Syntax in Schemathief
 
 ### Dot Notation (.)
 
@@ -86,7 +86,7 @@ is the equivalent of this JSON representation
 
 ### Combining . and []
 
-Dot notation and square brackets can be combined in $TemplateNamePascalCase$ to describe deeply nested structures, such as lists within nested dictionaries.
+Dot notation and square brackets can be combined in Schemathief to describe deeply nested structures, such as lists within nested dictionaries.
 
 #### Example of combination
 
@@ -122,7 +122,7 @@ is the equivalent of this JSON representation
 
 ### Behavior of Rows with Repeated Parent-Level Fields
 
-In $TemplateNamePascalCase$, rows with the same values for all non-list fields are considered part of the same top-level object. List fields (`[]`) for such rows are appended to the corresponding lists.
+In Schemathief, rows with the same values for all non-list fields are considered part of the same top-level object. List fields (`[]`) for such rows are appended to the corresponding lists.
 
 ```text
 Name.Fullname,Name.Acronym,Founded,Buildings[].Name,Buildings[].Type

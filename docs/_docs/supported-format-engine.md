@@ -2,7 +2,7 @@
 title: Supported data formats and template engines
 tags: [quick-start, cli-usage]
 ---
-**$TemplateNamePascalCase$** is a command-line tool designed for generating files based on templating. It supports *YAML*, *JSON*, *FrontMatter/Markdown*, *CSV* and *XML* as source data formats and provides flexibility in templating through both *Scriban*, *Liquid*, *Handlebars*, *StringTemplate*, *SmartFormat* and *Morestachio* templates languages. With $TemplateNamePascalCase$, you can easily automate file generation by combining structured data from YAML, JSON, or XML files with customizable templates using Scriban or Liquid.
+**Schemathief** is a command-line tool designed for generating files based on templating. It supports *YAML*, *JSON*, *FrontMatter/Markdown*, *CSV* and *XML* as source data formats and provides flexibility in templating through both *Scriban*, *Liquid*, *Handlebars*, *StringTemplate*, *SmartFormat* and *Morestachio* templates languages. With Schemathief, you can easily automate file generation by combining structured data from YAML, JSON, or XML files with customizable templates using Scriban or Liquid.
 
 ### Supported Data Formats
 
@@ -15,7 +15,7 @@ tags: [quick-start, cli-usage]
 
 ### Supported Templating Engines
 
-$TemplateNamePascalCase$ utilizes some templating engines, which allow for powerful and flexible templating.
+Schemathief utilizes some templating engines, which allow for powerful and flexible templating.
 
 #### Scriban [![GitHub project](https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg){: width="16" }](https://github.com/scriban/scriban) [![Documentation]({{ site.baseurl }}/uploads/document-round.png){: width="16" }](https://github.com/scriban/scriban/tree/master/doc)
 

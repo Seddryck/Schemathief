@@ -19,7 +19,7 @@ If .NET is not installed, download it from [Microsoft's official website](https:
 To install a .NET global tool, you use the dotnet tool install command. This command installs a tool for all users globally on your system.
 
 ```bash
-dotnet tool install -g $TemplateNamePascalCase$-cli
+dotnet tool install -g Schemathief-cli
 ```
 
 `-g`: This flag tells the dotnet command to install the tool globally.
@@ -29,7 +29,7 @@ dotnet tool install -g $TemplateNamePascalCase$-cli
 After installing the tool, you can verify that it's available globally by running it from any directory.
 
 ```bash
-$TemplateNameCamelCase$ --version
+schemathief --version
 ```
 
 This command will display the installed tool's version if the installation was successful.
@@ -39,5 +39,5 @@ This command will display the installed tool's version if the installation was s
 To update a globally installed .NET tool, use the dotnet tool update command:
 
 ```bash
-dotnet tool update -g $TemplateNamePascalCase$-cli
+dotnet tool update -g Schemathief-cli
 ```

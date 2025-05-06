@@ -7,7 +7,7 @@ tags: [cli-usage]
 - `-P, --parser-parameter`: Defines the parser's parameters (or configuraion) to use when using the parser. Accepted values have the form `file extension` followed by `@` followed by the `parameter name` and then `:` to end with the `parameter value`. This option is always optional and is only supported for a few specific parsers and with a predefined set of parameters for each of them.
 
 ```bash
-$TemplateNameCamelCase$ -t template.hbs -s data.tsv -X tsv:csv -P tsv@delimiter:Semicolumn;tsv@commentChar:#
+schemathief -t template.hbs -s data.tsv -X tsv:csv -P tsv@delimiter:Semicolumn;tsv@commentChar:#
 ```
 
 In this example:
@@ -19,7 +19,7 @@ In this example:
 
 ## Parameters for CSV parsers
 
-The following parameters are accepted by $TemplateNamePascalCase$ to define the behavior of a CSV parser:
+The following parameters are accepted by Schemathief to define the behavior of a CSV parser:
 
 - `delimiter`: Specifies the delimiter between fields.
 - `lineTerminator`: Specifies the delimiter between records.
@@ -37,7 +37,7 @@ More information about these parameters can found in [the documentation of Pocke
 
 ### Synonyms for parameter values
 
-To avoid conflicts with other parts of the command line, $TemplateNamePascalCase$ supports the following synonyms for parameter values:
+To avoid conflicts with other parts of the command line, Schemathief supports the following synonyms for parameter values:
 
 #### **delimiter**
 

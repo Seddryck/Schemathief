@@ -1,8 +1,8 @@
-# $TemplateNamePascalCase$
+# Schemathief
 
-![Logo](https://raw.githubusercontent.com/Seddryck/$TemplateNamePascalCase$/main/assets/$TemplateNameCamelCase$-logo-256.png)
+![Logo](https://raw.githubusercontent.com/Seddryck/Schemathief/main/assets/schemathief-logo-256.png)
 
-Transform your structured YAML, JSON, XML, CSV or FrontMatter data into beautiful, fully-customized HTML pages or plain text in seconds with $TemplateNamePascalCase$. This command-line tool seamlessly generates renders from data files using your preferred templates through Scriban, Handlebars, DotLiquid, Fluid, StringTemplate or SmartFormat. Whether you're building static sites, documentation, or reporting tools, $TemplateNamePascalCase$ makes it easy to turn raw data into polished, web-ready content.
+Transform your structured YAML, JSON, XML, CSV or FrontMatter data into beautiful, fully-customized HTML pages or plain text in seconds with Schemathief. This command-line tool seamlessly generates renders from data files using your preferred templates through Scriban, Handlebars, DotLiquid, Fluid, StringTemplate or SmartFormat. Whether you're building static sites, documentation, or reporting tools, Schemathief makes it easy to turn raw data into polished, web-ready content.
 
 [About][] | [Installing][] | [Quickstart][]
 
@@ -12,25 +12,25 @@ Transform your structured YAML, JSON, XML, CSV or FrontMatter data into beautifu
 
 ## About
 
-**Social media:** [![website](https://img.shields.io/badge/website-seddryck.github.io/$TemplateNamePascalCase$-fe762d.svg)](https://seddryck.github.io/$TemplateNamePascalCase$)
-[![twitter badge](https://img.shields.io/badge/twitter%20$TemplateNamePascalCase$-@Seddryck-blue.svg?style=flat&logo=twitter)](https://twitter.com/Seddryck)
+**Social media:** [![website](https://img.shields.io/badge/website-seddryck.github.io/Schemathief-fe762d.svg)](https://seddryck.github.io/Schemathief)
+[![twitter badge](https://img.shields.io/badge/twitter%20Schemathief-@Seddryck-blue.svg?style=flat&logo=twitter)](https://twitter.com/Seddryck)
 
-**Releases:** [![GitHub releases](https://img.shields.io/github/v/release/seddryck/$TemplateNameCamelCase$?label=GitHub%20releases)](https://github.com/seddryck/$TemplateNameCamelCase$/releases/latest) 
-[![nuget](https://img.shields.io/nuget/v/$TemplateNamePascalCase$-cli.svg)](https://www.nuget.org/packages/$TemplateNamePascalCase$-cli/) [![Docker Image Version](https://img.shields.io/docker/v/seddryck/$TemplateNameCamelCase$?label=docker%20hub&color=0db7ed)](https://hub.docker.com/repository/docker/seddryck/$TemplateNameCamelCase$/) [![GitHub Release Date](https://img.shields.io/github/release-date/seddryck/$TemplateNamePascalCase$.svg)](https://github.com/Seddryck/$TemplateNamePascalCase$/releases/latest) [![licence badge](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://github.com/Seddryck/$TemplateNamePascalCase$/blob/master/LICENSE) 
+**Releases:** [![GitHub releases](https://img.shields.io/github/v/release/seddryck/schemathief?label=GitHub%20releases)](https://github.com/seddryck/schemathief/releases/latest) 
+[![nuget](https://img.shields.io/nuget/v/Schemathief-cli.svg)](https://www.nuget.org/packages/Schemathief-cli/) [![Docker Image Version](https://img.shields.io/docker/v/seddryck/schemathief?label=docker%20hub&color=0db7ed)](https://hub.docker.com/repository/docker/seddryck/schemathief/) [![GitHub Release Date](https://img.shields.io/github/release-date/seddryck/Schemathief.svg)](https://github.com/Seddryck/Schemathief/releases/latest) [![licence badge](https://img.shields.io/badge/License-Apache%202.0-yellow.svg)](https://github.com/Seddryck/Schemathief/blob/master/LICENSE) 
 
-**Dev. activity:** [![GitHub last commit](https://img.shields.io/github/last-commit/Seddryck/$TemplateNamePascalCase$.svg)](https://github.com/Seddryck/$TemplateNamePascalCase$/commits)
+**Dev. activity:** [![GitHub last commit](https://img.shields.io/github/last-commit/Seddryck/Schemathief.svg)](https://github.com/Seddryck/Schemathief/commits)
 ![Still maintained](https://img.shields.io/maintenance/yes/2025.svg)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Seddryck/$TemplateNamePascalCase$)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Seddryck/Schemathief)
 
-**Continuous integration builds:** [![Build status](https://ci.appveyor.com/api/projects/status/na3dklqjsuv1lbfv?svg=true)](https://ci.appveyor.com/project/Seddryck/$TemplateNamePascalCase$/)
-[![Tests](https://img.shields.io/appveyor/tests/seddryck/$TemplateNamePascalCase$.svg)](https://ci.appveyor.com/project/Seddryck/$TemplateNamePascalCase$/build/tests)
-[![CodeFactor](https://www.codefactor.io/repository/github/seddryck/$TemplateNamePascalCase$/badge)](https://www.codefactor.io/repository/github/seddryck/$TemplateNamePascalCase$)
-[![codecov](https://codecov.io/github/Seddryck/$TemplateNamePascalCase$/branch/main/graph/badge.svg?token=YRA8IRIJYV)](https://codecov.io/github/Seddryck/$TemplateNamePascalCase$)
-<!-- [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSeddryck%2F$TemplateNamePascalCase$.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSeddryck%2F$TemplateNamePascalCase$?ref=badge_shield) -->
+**Continuous integration builds:** [![Build status](https://ci.appveyor.com/api/projects/status/na3dklqjsuv1lbfv?svg=true)](https://ci.appveyor.com/project/Seddryck/Schemathief/)
+[![Tests](https://img.shields.io/appveyor/tests/seddryck/Schemathief.svg)](https://ci.appveyor.com/project/Seddryck/Schemathief/build/tests)
+[![CodeFactor](https://www.codefactor.io/repository/github/seddryck/Schemathief/badge)](https://www.codefactor.io/repository/github/seddryck/Schemathief)
+[![codecov](https://codecov.io/github/Seddryck/Schemathief/branch/main/graph/badge.svg?token=YRA8IRIJYV)](https://codecov.io/github/Seddryck/Schemathief)
+<!-- [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSeddryck%2FSchemathief.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FSeddryck%2FSchemathief?ref=badge_shield) -->
 
-**Status:** [![stars badge](https://img.shields.io/github/stars/Seddryck/$TemplateNamePascalCase$.svg)](https://github.com/Seddryck/$TemplateNamePascalCase$/stargazers)
-[![Bugs badge](https://img.shields.io/github/issues/Seddryck/$TemplateNamePascalCase$/bug.svg?color=red&label=Bugs)](https://github.com/Seddryck/$TemplateNamePascalCase$/issues?utf8=%E2%9C%93&q=is:issue+is:open+label:bug+)
-[![Top language](https://img.shields.io/github/languages/top/seddryck/$TemplateNamePascalCase$.svg)](https://github.com/Seddryck/$TemplateNamePascalCase$/search?l=C%23)
+**Status:** [![stars badge](https://img.shields.io/github/stars/Seddryck/Schemathief.svg)](https://github.com/Seddryck/Schemathief/stargazers)
+[![Bugs badge](https://img.shields.io/github/issues/Seddryck/Schemathief/bug.svg?color=red&label=Bugs)](https://github.com/Seddryck/Schemathief/issues?utf8=%E2%9C%93&q=is:issue+is:open+label:bug+)
+[![Top language](https://img.shields.io/github/languages/top/seddryck/Schemathief.svg)](https://github.com/Seddryck/Schemathief/search?l=C%23)
 
 ## Installing
 
@@ -50,7 +50,7 @@ If .NET is not installed, download it from [Microsoft's official website](https:
 To install a .NET global tool, you use the dotnet tool install command. This command installs a tool for all users globally on your system.
 
 ```bash
-dotnet tool install -g $TemplateNamePascalCase$-cli
+dotnet tool install -g Schemathief-cli
 ```
 
 `-g`: This flag tells the dotnet command to install the tool globally.
@@ -60,7 +60,7 @@ dotnet tool install -g $TemplateNamePascalCase$-cli
 After installing the tool, you can verify that it's available globally by running it from any directory.
 
 ```bash
-$TemplateNameCamelCase$ --version
+schemathief --version
 ```
 
 This command will display the installed tool’s version if the installation was successful.
@@ -70,7 +70,7 @@ This command will display the installed tool’s version if the installation was
 To update a globally installed .NET tool, use the dotnet tool update command:
 
 ```bash
-dotnet tool update -g $TemplateNamePascalCase$-cli
+dotnet tool update -g Schemathief-cli
 ```
 
 ### Install from Docker
@@ -84,30 +84,30 @@ dotnet tool update -g $TemplateNamePascalCase$-cli
 A pre-built Docker image is available on Docker Hub, you can pull it using the following command:
 
 ```powershell
-docker pull seddryck/$TemplateNameCamelCase$:latest
+docker pull seddryck/schemathief:latest
 ```
 
-#### Running $TemplateNamePascalCase$ from Docker
+#### Running Schemathief from Docker
 
-Once you have the Docker image, you can run $TemplateNamePascalCase$ using Docker in PowerShell.
+Once you have the Docker image, you can run Schemathief using Docker in PowerShell.
 
 ###### Basic Command
 
 <sub>CMD:</sub>
 ```CMD
-docker run --rm -v %cd%:/files $TemplateNameCamelCase$ -t <template-file> -s <source-file> -o <output-file>
+docker run --rm -v %cd%:/files schemathief -t <template-file> -s <source-file> -o <output-file>
 ```
 
 <sub>PowerShell:</sub>
 ```powershell
-docker run --rm -v ${pwd}:/files $TemplateNameCamelCase$ -t <template-file> -s <source-file> -o <output-file>
+docker run --rm -v ${pwd}:/files schemathief -t <template-file> -s <source-file> -o <output-file>
 ```
 
 - `--rm`: Automatically removes the container after it finishes executing.
-- `-v ${pwd}:/files`: Mounts the current directory (`${pwd}` in PowerShell or Bash, `%cd%` in CMD) to /files inside the Docker container, so $TemplateNamePascalCase$ can access your local files.
+- `-v ${pwd}:/files`: Mounts the current directory (`${pwd}` in PowerShell or Bash, `%cd%` in CMD) to /files inside the Docker container, so Schemathief can access your local files.
 - `-t <template-file>`: Specifies the path to the template file inside the /files directory.
 - `-s <source-file>`: Specifies the path to the source file (YAML, JSON, or XML).
-- `-o <output-file>`: Specifies the path to the output file that $TemplateNamePascalCase$ will generate. If omitted, it will display the result on the host console.
+- `-o <output-file>`: Specifies the path to the output file that Schemathief will generate. If omitted, it will display the result on the host console.
 
 ##### Example Workflow:
 
@@ -116,20 +116,20 @@ docker run --rm -v ${pwd}:/files $TemplateNameCamelCase$ -t <template-file> -s <
   - Make sure your template and source files are correctly formatted and saved in the correct directory. For example:
     - `./templates/template-01.hbs`
     - `./data/data.json`
-2. Run $TemplateNamePascalCase$: Use the following command to generate templated output:
+2. Run Schemathief: Use the following command to generate templated output:
 
 ```powershell
-docker run --rm -v ${pwd}:/files $TemplateNameCamelCase$ -t /files/templates/template-01.hbs -s /files/data/data.json -o /files/output/output.txt
+docker run --rm -v ${pwd}:/files schemathief -t /files/templates/template-01.hbs -s /files/data/data.json -o /files/output/output.txt
 ```
 
 3. Access the Output: The output file will be generated in ./output/output.txt on your local machine after the Docker container finishes execution.
 
-#### Updating $TemplateNamePascalCase$
+#### Updating Schemathief
 
-To update to the latest version of $TemplateNamePascalCase$, either pull the new Docker image
+To update to the latest version of Schemathief, either pull the new Docker image
 
 ```powershell
-docker pull seddryck/$TemplateNameCamelCase$:latest
+docker pull seddryck/schemathief:latest
 ```
 
 ### Install from GitHub Releases
@@ -143,13 +143,13 @@ docker pull seddryck/$TemplateNameCamelCase$:latest
 Example:
 
    ```
-   https://github.com/Seddryck/$TemplateNamePascalCase$/releases/latest/
+   https://github.com/Seddryck/Schemathief/releases/latest/
    ```
 
 #### Step 2: Extract the ZIP File
 
 1. Right-click the downloaded `.zip` file and choose **Extract All**.
-2. Extract the contents to a directory of your choice, such as `C:\Program Files\$TemplateNamePascalCase$`.
+2. Extract the contents to a directory of your choice, such as `C:\Program Files\Schemathief`.
 
 > **Tip**: Choose a path that is easy to remember and doesn't contain special characters.
 
@@ -161,18 +161,18 @@ To run the executable from any location in the command line, you need to add its
 2. Click **Edit the system environment variables**.
 3. In the **System Properties** window, click **Environment Variables**.
 4. In the **System Variables** section, scroll down, select **Path**, and click **Edit**.
-5. In the **Edit Environment Variable** dialog, click **New** and enter the path to your extracted folder, e.g., `C:\Program Files\$TemplateNamePascalCase$`.
+5. In the **Edit Environment Variable** dialog, click **New** and enter the path to your extracted folder, e.g., `C:\Program Files\Schemathief`.
 6. Click **OK** to close all windows.
 
 ### Step 4: Verify Installation
 
 1. Open **Command Prompt** (CMD).
-2. Type the name of the executable (e.g., `$TemplateNameCamelCase$.exe`) and hit Enter.
+2. Type the name of the executable (e.g., `schemathief.exe`) and hit Enter.
 3. If everything is set up correctly, the program should run.
 
 ## QuickStart
 
-**$TemplateNamePascalCase$** is a command-line tool designed for generating files based on templating. It supports *YAML*, *JSON*, and *XML* as source data formats and provides flexibility in templating through both *Scriban*, *Liquid*, *Handlebars*, *StringTemplate* and *SmartFormat* templates languages. With $TemplateNamePascalCase$, you can easily automate file generation by combining structured data from YAML, JSON, or XML files with customizable templates using Scriban or Liquid.
+**Schemathief** is a command-line tool designed for generating files based on templating. It supports *YAML*, *JSON*, and *XML* as source data formats and provides flexibility in templating through both *Scriban*, *Liquid*, *Handlebars*, *StringTemplate* and *SmartFormat* templates languages. With Schemathief, you can easily automate file generation by combining structured data from YAML, JSON, or XML files with customizable templates using Scriban or Liquid.
 
 ### Supported Data Formats:
 
@@ -185,7 +185,7 @@ To run the executable from any location in the command line, you need to add its
 
 ### Supported Templating Engines:
 
-$TemplateNamePascalCase$ utilizes some templating engines, which allow for powerful and flexible templating.
+Schemathief utilizes some templating engines, which allow for powerful and flexible templating.
 
 - **Scriban**: Templates with the `.scriban` extension are parsed using a Scriban template engine. Scriban is a lightweight and fast template engine with rich support for multiple output formats.
   - Highly performant, designed to handle large-scale template processing.
@@ -214,7 +214,7 @@ $TemplateNamePascalCase$ utilizes some templating engines, which allow for power
 
 ### Command Usage:
 
-The command to run $TemplateNamePascalCase$ is simply `$TemplateNameCamelCase$`. When executing it, you need to provide three required arguments:
+The command to run Schemathief is simply `schemathief`. When executing it, you need to provide three required arguments:
 
 - `-t, --template` (required): Specifies the path to the Scriban, Liquid, Handlebars, StringTemplate or SmartFormat template file.
 - `-s, --source`: Specifies the path to the source data file, which can be in YAML, JSON, or XML format. If this argument is not provided, the data will be read from the console input. In such cases, the `-r, --parser` option becomes mandatory.
@@ -223,7 +223,7 @@ The command to run $TemplateNamePascalCase$ is simply `$TemplateNameCamelCase$`.
 **Example:**
 
 ```bash
-$TemplateNameCamelCase$ -t template.scriban -s data.yaml -o page.html
+schemathief -t template.scriban -s data.yaml -o page.html
 ```
 
 In this example:
@@ -248,7 +248,7 @@ In this example:
 - Shortcut: `-e`
 - Long: `--engine`
 - Description: Specifies the template engine to use (scriban, fluid, dotliquid, handlebars, smartformat, stringtemplate).
-- Accept: single value. When omitted $TemplateNamePascalCase$ will select the engine based on the extension of the template file.
+- Accept: single value. When omitted Schemathief will select the engine based on the extension of the template file.
 - Example: `-e fluid` or `--engine=fluid`
 
 ### Engine files' extension association option
@@ -277,7 +277,7 @@ In this example:
 - Long: `--parser`
 - Description: Specifies the parser to use (YAML, JSON, XML).
 - Accept: single value.
-- Mandatory: no expect if `--stdin` is specified. When omitted $TemplateNamePascalCase$ will select the parser based on the extension of the source file
+- Mandatory: no expect if `--stdin` is specified. When omitted Schemathief will select the parser based on the extension of the source file
 - Example: `-r YAML` or `--parser=YAML`
 
 ### Parser files' extension association option
@@ -321,7 +321,7 @@ In this example:
 ##### With a source file:
 
 ```bash
-$TemplateNameCamelCase$ -t template.scriban -s data.yaml -o page.html
+schemathief -t template.scriban -s data.yaml -o page.html
 ```
 
 In this example:
@@ -334,17 +334,17 @@ In this example:
 
 <sub>CMD:</sub>
 ```cmd
-type "data.json" | $TemplateNameCamelCase$ --stdin -t template.hbs -r json
+type "data.json" | schemathief --stdin -t template.hbs -r json
 ```
 
 <sub>PowerShell:</sub>
 ```powershell
-Get-Content data.json | $TemplateNameCamelCase$ --stdin -t template.hbs -r json
+Get-Content data.json | schemathief --stdin -t template.hbs -r json
 ```
 
 <sub>Bash:</sub>
 ```bash
-cat data.json | $TemplateNameCamelCase$ --stdin -t template.hbs -r json
+cat data.json | schemathief --stdin -t template.hbs -r json
 ```
 
 In this example:
