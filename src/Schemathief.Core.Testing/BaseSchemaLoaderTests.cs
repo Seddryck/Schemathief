@@ -15,7 +15,6 @@ internal class BaseSchemaLoaderTests
     [Test]
     public async Task LoadAsync_ReturnsSchema_WhenPropertiesPresent()
     {
-        // Arrange
         var schemaJson = @"
         {
           ""title"": ""MySchema"",
@@ -33,10 +32,8 @@ internal class BaseSchemaLoaderTests
         var client = mockHttp.ToHttpClient();
         var loader = new HttpBaseSchemaLoader(client);
 
-        // Act
-        JsonObject? result = await loader.LoadAsync("https://example.com/schema.json");
+        var result = await loader.LoadAsync("https://example.com/schema.json");
 
-        // Assert
         Assert.That(result, Is.Not.Null);
         var props = result["properties"]!.AsObject().Select(p => p.Key).ToHashSet();
         Assert.That(props.Contains("Foo"));
@@ -46,7 +43,6 @@ internal class BaseSchemaLoaderTests
     [Test]
     public async Task LoadAsync_ReturnsNull_WhenPropertiesMissing()
     {
-        // Arrange
         var noPropsJson = @"{ ""title"": ""EmptySchema"" }";
 
         var mockHttp = new MockHttpMessageHandler();
@@ -57,7 +53,7 @@ internal class BaseSchemaLoaderTests
         var client = mockHttp.ToHttpClient();
         var loader = new HttpBaseSchemaLoader(client);
 
-        JsonObject? result = await loader.LoadAsync("https://example.com/no-props.json");
+        var result = await loader.LoadAsync("https://example.com/no-props.json");
 
         Assert.That(result, Is.Null);
     }

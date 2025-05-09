@@ -121,7 +121,7 @@ internal class DeltaServiceTests
     [Test]
     public async Task GenerateAsync_WithOutputPath_CreatesAndUsesFileRenderer()
     {
-        // Arrange
+        
         string url = "https://example.com/schema-partial.json";
         string schemaJson = @"{
                 'title': 'Test',
@@ -134,10 +134,8 @@ internal class DeltaServiceTests
         _rendererFactoryMock.Setup(f => f.CreateRenderer(It.IsAny<string>()))
             .Returns(mockRenderer.Object);
 
-        // Act
         await _service.GenerateAsync(_assemblyPath, _validTypeName, url, Array.Empty<string>(), "test.json");
 
-        // Assert
         _rendererFactoryMock.Verify(f => f.CreateRenderer("test.json"), Times.Once);
         mockRenderer.Verify(r => r.RenderAsync(It.IsAny<string>()), Times.Once);
     }
@@ -145,7 +143,6 @@ internal class DeltaServiceTests
     [Test]
     public async Task GenerateAsync_WithoutOutputPath_CreatesAndUsesConsoleRenderer()
     {
-        // Arrange
         string url = "https://example.com/schema-partial.json";
         string schemaJson = @"{
                 'title': 'Test',
@@ -158,10 +155,8 @@ internal class DeltaServiceTests
         _rendererFactoryMock.Setup(f => f.CreateRenderer(null))
             .Returns(mockRenderer.Object);
 
-        // Act
         await _service.GenerateAsync(_assemblyPath, _validTypeName, url, Array.Empty<string>());
 
-        // Assert
         _rendererFactoryMock.Verify(f => f.CreateRenderer(null), Times.Once);
         mockRenderer.Verify(r => r.RenderAsync(It.IsAny<string>()), Times.Once);
     }

@@ -26,7 +26,6 @@ internal class SchemaDeltaBuilderTests
     [Test]
     public void BuildDeltaProperties_ExcludesBaseProps_AndGeneratesCorrectSchemaEntries()
     {
-        // Arrange
         var definedProps = typeof(DummyType)
             .GetProperties(BindingFlags.Public | BindingFlags.Instance)
             .ToHashSet();
@@ -34,7 +33,6 @@ internal class SchemaDeltaBuilderTests
         // Exclude "Count" so that nullable int property is treated as base
         var baseProps = new HashSet<string>(StringComparer.OrdinalIgnoreCase) { "Count" };
 
-        // Act
         var delta = SchemaDeltaBuilder.BuildDeltaProperties(definedProps, baseProps);
 
         // Assert keys: Name, Values, Details (camelCase)
@@ -63,7 +61,6 @@ internal class SchemaDeltaBuilderTests
     [Test]
     public void BuildFinalSchema_CombinesBaseAndDelta_WithCorrectStructure()
     {
-        // Arrange
         var baseSchema = new JsonObject
         {
             ["title"] = "Original"

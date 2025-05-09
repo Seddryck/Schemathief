@@ -37,30 +37,24 @@ public class RendererIntegrationTests : IDisposable
     [Test]
     public async Task ConsoleOutputRenderer_ShouldWriteToConsole()
     {
-        // Arrange
         var renderer = new ConsoleOutputRenderer();
         var testContent = "Test content";
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
 
-        // Act
         await renderer.RenderAsync(testContent);
 
-        // Assert
         Assert.That(stringWriter.ToString(), Is.EqualTo(testContent + Environment.NewLine));
     }
 
     [Test]
     public async Task FileOutputRenderer_ShouldWriteToFile()
     {
-        // Arrange
         var renderer = new FileOutputRenderer(_testFilePath);
         var testContent = "Test content";
 
-        // Act
         await renderer.RenderAsync(testContent);
 
-        // Assert
         var fileContent = await File.ReadAllTextAsync(_testFilePath);
         Assert.That(fileContent, Is.EqualTo(testContent));
     }
@@ -68,27 +62,21 @@ public class RendererIntegrationTests : IDisposable
     [Test]
     public async Task FileOutputRenderer_ShouldShowSuccessMessage()
     {
-        // Arrange
         var renderer = new FileOutputRenderer(_testFilePath);
         var testContent = "Test content";
         var stringWriter = new StringWriter();
         Console.SetOut(stringWriter);
 
-        // Act
         await renderer.RenderAsync(testContent);
 
-        // Assert
         Assert.That(stringWriter.ToString(), Does.Contain($"Schema written to {_testFilePath}"));
     }
 
     [Test]
     public void FileOutputRenderer_WithInvalidPath_ShouldThrowException()
     {
-        // Arrange
         var invalidPath = Path.Combine(Path.GetTempPath(), "nonexistent", "test.json");
         var renderer = new FileOutputRenderer(invalidPath);
-
-        // Act & Assert
         Assert.That(async () => await renderer.RenderAsync("Test content"),
             Throws.TypeOf<DirectoryNotFoundException>());
     }
