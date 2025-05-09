@@ -4,43 +4,34 @@
 
 Schemathief is a lightweight .NET library and CLI tool for generating JSON-Schema delta documents from your CLR types. Whether you need to keep your API schema up-to-date, drive automated data-model documentation, or generate client stubs only for the new fields you’ve added, Schemathief does the heavy lifting:
 
-1. Load & compare
+### Load & compare
 
-Fetches a base schema from a URL or file via a pluggable IBaseSchemaLoader
+* Fetches a base schema from a URL or file via a pluggable IBaseSchemaLoader
+* Reflects over your target assembly to discover all public, read/write properties
+* Allows you to exclude known fields (e.g. legacy or deprecated properties)
 
-Reflects over your target assembly to discover all public, read/write properties
+### Generate delta
 
-Allows you to exclude known fields (e.g. legacy or deprecated properties)
+* Maps .NET types to JSON-Schema types (string, integer, array, object) with full support for nullable, primitive, and complex types
+* Recursively builds nested definitions for child objects and collections
+* Produces a minimal “delta schema” that you can combine with your base via an allOf merge
 
-1. Generate delta
+### CLI & API
 
-Maps .NET types to JSON-Schema types (string, integer, array, object) with full support for nullable, primitive, and complex types
+* A dotnet tool–friendly System.CommandLine implementation (delta verb, intuitive options) ready for CI/CD
+* Dependency-injection–friendly services (IDeltaService, IBaseSchemaLoader) so you can stub or replace behavior in your own apps
+* Fully unit‐tested core (SchemaBuilder, TypeInspector, ClrToJsonTypeMapper, TypeInspectorHelper) and integration‐tested end-to-end
 
-Recursively builds nested definitions for child objects and collections
+### Pack & ship
 
-Produces a minimal “delta schema” that you can combine with your base via an allOf merge
-
-1. CLI & API
-
-A dotnet tool–friendly System.CommandLine implementation (delta verb, intuitive options) ready for CI/CD
-
-Dependency-injection–friendly services (IDeltaService, IBaseSchemaLoader) so you can stub or replace behavior in your own apps
-
-Fully unit‐tested core (SchemaBuilder, TypeInspector, ClrToJsonTypeMapper, TypeInspectorHelper) and integration‐tested end-to-end
-
-1. Pack & ship
-
-Ship your own JSON-Schema artifacts right inside your NuGet package via contentFiles/any/any/schemas so consumers get editor IntelliSense out of the box
-
-Integrates smoothly into existing build pipelines with dotnet pack, GitVersion, or any other automation
+* Ship your own JSON-Schema artifacts right inside your NuGet package via contentFiles/any/any/schemas so consumers get editor IntelliSense out of the box
+* Integrates smoothly into existing build pipelines with dotnet pack, GitVersion, or any other automation
 
 # Why Schemathief?
 
-Zero boilerplate: No more hand-crafting schema diffs by hand or writing reflection glue in every project.
-
-Future-proof: Designed around the JSON-Schema draft-07 spec today, easy to extend for draft-next tomorrow.
-
-Give it a try in your next microservice or data-model repo—keep your schemas in lock-step with your code
+* Zero boilerplate: No more hand-crafting schema diffs by hand or writing reflection glue in every project.
+* Future-proof: Designed around the JSON-Schema draft-07 spec today, easy to extend for draft-next tomorrow.
+* Give it a try in your next microservice or data-model repo—keep your schemas in lock-step with your code
 
 [About][] | [Installing][] | [Quickstart][]
 
