@@ -12,5 +12,6 @@ public interface IDeltaService
         string assemblyPath,
         string fullyQualifiedClassName,
         string baseSchemaUrl,
-        string[] excludes);
+        string[] excludes,
+        string? outputPath);
 }
