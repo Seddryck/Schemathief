@@ -30,23 +30,20 @@ internal class DeltaCommandTests
     [Test]
     public async Task Invoke_WithAllRequiredOptions_CallsGenerateAsyncAndReturnsZero()
     {
-        // Arrange
         const string assembly = "path/to/MyLib.dll";
         const string @class = "My.Namespace.MyType";
         const string baseUrl = "https://example.com/schema.json";
         var excludes = new[] { "PropA", "PropB" };
 
         _mockService
-            .Setup(s => s.GenerateAsync(assembly, @class, baseUrl, excludes))
+            .Setup(s => s.GenerateAsync(assembly, @class, baseUrl, excludes, null))
             .ReturnsAsync([])
             .Verifiable();
 
         var args = $"delta -a {assembly} -c {@class} -b {baseUrl} -x PropA|PropB";
 
-        // Act
         var exitCode = await _rootCommand.InvokeAsync(args);
 
-        // Assert
         Assert.That(exitCode, Is.Zero);
         _mockService.Verify();
     }
@@ -54,14 +51,13 @@ internal class DeltaCommandTests
     [Test]
     public async Task Invoke_WithoutExcludeOption_PassesEmptyArrayToService()
     {
-        // Arrange
         const string assembly = "lib.dll";
         const string @class = "C.T";
         const string baseUrl = "http://schema";
         var excludes = new string[0];
 
         _mockService
-            .Setup(s => s.GenerateAsync(assembly, @class, baseUrl, excludes))
+            .Setup(s => s.GenerateAsync(assembly, @class, baseUrl, excludes, null))
             .ReturnsAsync([])
             .Verifiable();
 

@@ -3,22 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Threading.Tasks;
+using Schemathief.Core.Renderers;
 
 namespace Schemathief.Core;
 public class DeltaService : IDeltaService
 {
     private readonly IBaseSchemaLoader _loader;
+    private readonly IOutputRendererFactory _rendererFactory;
 
-    public DeltaService(IBaseSchemaLoader loader)
-        => _loader = loader;
+    public DeltaService(IBaseSchemaLoader loader, IOutputRendererFactory rendererFactory)
+    {
+        _loader = loader;
+        _rendererFactory = rendererFactory;
+    }
 
     public async Task<JsonObject?> GenerateAsync(
         string assemblyPath,
         string fullyQualifiedClassName,
         string baseSchemaUrl,
-        string[] excludes)
+        string[] excludes,
+        string? outputPath = null)
     {
         var baseSchema = await _loader.LoadAsync(baseSchemaUrl);
         if (baseSchema == null)
@@ -36,6 +43,14 @@ public class DeltaService : IDeltaService
         if (deltaProps.Count == 0)
             return null;
 
-        return SchemaDeltaBuilder.BuildFinalSchema(baseSchema, deltaProps, baseSchemaUrl);
+        var result = SchemaDeltaBuilder.BuildFinalSchema(baseSchema, deltaProps, baseSchemaUrl);
+        
+        if (result != null)
+        {
+            var renderer = _rendererFactory.CreateRenderer(outputPath);
+            await renderer.RenderAsync(result.ToJsonString(new JsonSerializerOptions { WriteIndented = true }));
+        }
+
+        return result;
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.IO;
 using Schemathief.Core;
 
 namespace Schemathief.Cli;
@@ -16,6 +17,7 @@ public class DeltaCommand
     public Option<string> ClassOption { get; }
     public Option<string> BaseSchemaOption { get; }
     public Option<string[]> ExcludeOption { get; }
+    public Option<string> OutputOption { get; }
 
     public DeltaCommand(IDeltaService deltaService)
     {
@@ -44,6 +46,10 @@ public class DeltaCommand
                 var value = result.Tokens.SingleOrDefault()?.Value;
                 return value?.Split('|', StringSplitOptions.RemoveEmptyEntries) ?? Array.Empty<string>();
             });
+
+        OutputOption = new Option<string>(
+            aliases: new[] { "--output", "-o" },
+            description: "Path to write the output to. If not specified, output will be written to console.");
     }
 
     public Command Create()
@@ -53,21 +59,18 @@ public class DeltaCommand
             AssemblyOption,
             ClassOption,
             BaseSchemaOption,
-            ExcludeOption
+            ExcludeOption,
+            OutputOption
         };
 
-        command.SetHandler(async (string assemblyPath, string fqcn, string baseSchemaUrl, string[] excludes) =>
+        command.SetHandler(async (string assemblyPath, string fqcn, string baseSchemaUrl, string[] excludes, string outputPath) =>
         {
-            var result = await _deltaService.GenerateAsync(assemblyPath, fqcn, baseSchemaUrl, excludes);
+            var result = await _deltaService.GenerateAsync(assemblyPath, fqcn, baseSchemaUrl, excludes, outputPath);
             if (result is null)
             {
                 Console.Error.WriteLine("No delta schema generated.");
             }
-            else
-            {
-                Console.WriteLine(result.ToJsonString(new JsonSerializerOptions { WriteIndented = true }));
-            }
-        }, AssemblyOption, ClassOption, BaseSchemaOption, ExcludeOption);
+        }, AssemblyOption, ClassOption, BaseSchemaOption, ExcludeOption, OutputOption);
 
         return command;
     }
