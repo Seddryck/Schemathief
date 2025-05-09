@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -121,7 +121,6 @@ internal class DeltaServiceTests
     [Test]
     public async Task GenerateAsync_WithOutputPath_CreatesAndUsesFileRenderer()
     {
-        
         string url = "https://example.com/schema-partial.json";
         string schemaJson = @"{
                 'title': 'Test',
